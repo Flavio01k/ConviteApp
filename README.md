@@ -16,3 +16,13 @@ Backend gera dinamicamente arquivo .pdf
 PDF gerado pode ser baixado ou enviado via email/WhatsApp (integração futura)
 
 Armazenamento dos convites gerados e dados no banco
+
+para rodar o codigo
+
+```
+npm install canvas pdf-lib
+npm install pdf-lib express
+
+npm run dev
+
+```
