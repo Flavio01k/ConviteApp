@@ -33,7 +33,7 @@ async function gerarPdfConvite(nome1, nome2) {
     color: rgb(1, 1, 1), // branco
   });
 
-  page.drawText(`${nome1} & ${nome2}`, {
+  page.drawText(`${nome1}`, {
     x: 50,
     y: 250,
     size: 18,
