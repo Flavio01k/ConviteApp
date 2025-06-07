@@ -4,18 +4,14 @@ Aplicação web para gerar convites personalizados em PDF usando LaTeX. O client
 # Tecnologias usadas
 Frontend: React + Vite + Tailwind CSS 
 
-Backend: Node.js API para gerar arquivo .tex e compilar PDF com TeX Live
+Backend: Node.js API para gerar arquivo  e pdf-lib
 
 Base de dados: MySQL  para armazenar dados dos convites
-
-LaTeX: TeX Live instalado no servidor para compilar .tex em PDF
 
 Funcionalidades
 Interface web para cadastro de nomes convidados
 
-Backend gera dinamicamente arquivo .tex com dados do convite
-
-Compilação automática do .tex em PDF via TeX Live
+Backend gera dinamicamente arquivo .pdf
 
 PDF gerado pode ser baixado ou enviado via email/WhatsApp (integração futura)
 
