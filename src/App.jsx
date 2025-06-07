@@ -6,14 +6,14 @@ function App() {
   const [error, setError] = useState(null);
 
   async function gerarPDF() {
-  
+
     setError(null);
 
     try {
       const response = await fetch("http://localhost:3000/gerar-pdf", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ nome1}),
+        body: JSON.stringify({ nome1 }),
       });
 
       if (!response.ok) {
@@ -40,18 +40,18 @@ function App() {
           Gerador de Convite
         </h1>
 
-        <div className="space-y-4">
+        <div className="space-y-4 bg-[#18122B] p-6 rounded-lg">
           <input
             type="text"
             placeholder="Primeiro nome"
             value={nome1}
             onChange={(e) => setNome1(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
+            className="w-full px-4 py-3 bg-[#18122B] border border-white border-[1.5px] text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white placeholder:text-gray-300 transition"
           />
 
           <button
             onClick={gerarPDF}
-            className="w-full py-3 bg-gradient-to-r from-pink-500 to-red-400 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition duration-300"
+            className="w-full py-3 bg-[#18122B] border border-white border-[1.5px] text-white font-semibold rounded-lg shadow-md hover:bg-white hover:text-[#18122B] hover:border-[#18122B] transition duration-300"
           >
             Gerar PDF ✨
           </button>
