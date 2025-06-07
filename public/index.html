@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gerador de Convite</title>
+    <style>
+        body { font-family: Arial; max-width: 500px; margin: 0 auto; padding: 20px; }
+        input { padding: 8px; margin: 5px 0; width: 100%; }
+        button { padding: 10px 15px; background: #0066cc; color: white; border: none; }
+    </style>
+</head>
+<body>
+    <h1>Gerador de Convite</h1>
+    
+    <input type="text" id="nome1" placeholder="Primeiro nome">
+    <input type="text" id="nome2" placeholder="Segundo nome">
+    
+    <button onclick="gerarPDF()">Gerar PDF</button>
+
+    <script>
+        async function gerarPDF() {
+            const nome1 = document.getElementById('nome1').value;
+            const nome2 = document.getElementById('nome2').value;
+            
+            const response = await fetch('/gerar-pdf', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ nome1, nome2 })
+            });
+            
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'convite.pdf';
+            a.click();
+        }
+    </script>
+</body>
+</html>
