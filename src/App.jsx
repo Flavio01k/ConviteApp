@@ -34,9 +34,14 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-100 to-blue-100">
-      <div className="bg-white shadow-2xl rounded-2xl p-8 max-w-md w-full text-center">
-        <h1 className="text-3xl font-extrabold text-gray-800 mb-6">
+    <div className="min-h-screen flex items-center justify-center ">
+      <div className="bg-gray shadow-2xl rounded-2xl p-8 max-w-md w-full text-center"
+      style={{
+              boxShadow: "0 0 2px #ffff, 0 0 0 0 #fff", // Glow rosa neon
+         
+            }}>
+        <h1 className="text-3xl font-extrabold text-gray-100 mb-6"
+        >
           Gerador de Convite
         </h1>
 
@@ -46,13 +51,20 @@ function App() {
             placeholder="Primeiro nome"
             value={nome1}
             onChange={(e) => setNome1(e.target.value)}
-            className="w-full px-4 py-3 bg-[#18122B] border border-white border-[1.5px] text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white placeholder:text-gray-300 transition"
+            className="w-full px-4 py-3 bg-[#18122B] shadow-2xl   text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white placeholder:text-gray-700 transition"
+            style={{
+              boxShadow: "0 0 4px #ffff, 0 0 0 0 #fff", // Glow rosa neon
+           
+            }}
           />
 
           <button
             onClick={gerarPDF}
-            className="w-full py-3 bg-[#18122B] border border-white border-[1.5px] text-white font-semibold rounded-lg shadow-md hover:bg-white hover:text-[#18122B] hover:border-[#18122B] transition duration-300"
-          >
+            className="w-full px-4 py-3 bg-[#18122B] shadow-2xl   text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white placeholder:text-gray-700 transition"
+            style={{
+              boxShadow: "0 0 4px #ffff, 0 0 0 0 #fff", // Glow rosa neon
+            
+            }}>
             Gerar PDF ✨
           </button>
 
