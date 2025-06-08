@@ -6,17 +6,17 @@ async function gerarPdfConvite(nome1, nome2) {
   const pdfDoc = await PDFDocument.create();
   pdfDoc.registerFontkit(fontkit);
 
-  const page = pdfDoc.addPage([600, 400]);
+  const page = pdfDoc.addPage([2000, 1334]);
 
   // Carrega imagem de fundo
-  const pngImageBytes = fs.readFileSync('../src/assets/conviteLizney.png');
+  const pngImageBytes = fs.readFileSync('../src/assets/convite.png');
   const pngImage = await pdfDoc.embedPng(pngImageBytes);
 
   page.drawImage(pngImage, {
     x: 0,
     y: 0,
-    width: 600,
-    height: 400,
+    width: 2000,
+    height: 1334,
   });
 
   // Carrega e embute a fonte Playfair Display
@@ -34,21 +34,21 @@ async function gerarPdfConvite(nome1, nome2) {
   // });
 
 const texto = `${nome1}`;
-const xInicio = 50;
-const xFim = 300;
+const xInicio = 150;
+const xFim = 1136;
 const larguraArea = xFim - xInicio;
-const tamanhoFonte = 36;
+const tamanhoFonte = 100;
 
 const larguraTexto = customFont.widthOfTextAtSize(texto, tamanhoFonte);
 const xCentralizado = xInicio + (larguraArea / 2) - (larguraTexto / 2);
 
 page.drawText(texto, {
   x: xCentralizado,
-  y: 155,
+  y: 540,
   size: tamanhoFonte,
   font: customFont,
   color: rgb(1, 1, 1),
-  link: 'https://www.exemplo.com', // branco
+  link: 'https://convite-lizney.vercel.app/', // branco
 });
 
   // // Link clicável
