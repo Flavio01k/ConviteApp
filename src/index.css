@@ -4,8 +4,8 @@
 
   --color-bg: #1e1b4b;              
 
-  --color-text: #f5f3ff;              
-  --color-accent: #8b5cf6;          
+  --color-text: #3f337d;              
+  --color-accent: #2d126b;          
   --color-accent-hover: #7c3aed;    
   font-family: var(--font-family);
   background-color: var(--color-bg);
@@ -14,7 +14,7 @@
 
 .dark {
   --color-bg: #1e1b4b;              
-  --color-text: #ede9fe;           
+  --color-text: #433489;           
   --color-accent: #c084fc;          
   --color-accent-hover: #a855f7;    
 

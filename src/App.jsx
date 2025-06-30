@@ -34,10 +34,10 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-100 to-blue-100">
-      <div className="bg-white shadow-2xl rounded-2xl p-8 max-w-md w-full text-center">
-        <h1 className="text-3xl font-extrabold text-gray-800 mb-6">
-          Gerador de Convite
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-800 to-blue-900">
+      <div className="bg-blue-900 shadow-2xl rounded-2xl p-8 max-w-md w-full text-center">
+        <h1 className="text-3xl font-extrabold text-gray-100 mb-6">
+          Gerador de Convite de Lizney
         </h1>
 
         <div className="space-y-4 bg-[#18122B] p-6 rounded-lg">
